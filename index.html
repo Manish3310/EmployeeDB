@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Vertical (basic) form</h2>
+        <h2>Employee Details Form</h2>
         <form id="empForm" method="post">
             <div class="form-group">
                 <span><label for="empId">Employee ID:</label> <label id="empIdMsg">
@@ -19,11 +19,15 @@
             </div>
             <div class="form-group">
                 <label for="empName">Employee Name:</label>
-                <input type="text" class="form-control" id="empName" placeholder="Enter Employee Name" name="empName">
+                <input type="text" class="form-control" id="empName" placeholder="Enter Employee Name" name="empName" width="148">
             </div>
             <div class="form-group">
                 <label for="empEmail">Email:</label>
                 <input type="email" class="form-control" id="empEmail" placeholder="Enter Employee Email" name="empEmail">
+            </div>
+            <div class="form-group">
+                <label for="empPassword">Password:</label>
+                <input type="password" class="form-control" id="empPassword" placeholder="Enter Password" name="empPassword">
             </div>
             <input type="button" class="btn btn-primary" id="empSave" value="Save" onclick="saveEmployee();">
         </form>
@@ -53,10 +57,17 @@
                 $("#empEmail").focus();
                 return "";
             }
+            var empPasswordVar = $("#empPassword").val();
+            if (empPasswordVar === "") {
+                alert("Employee Password is Required Value");
+                $("#empPassword").focus();
+                return "";
+            }
             var jsonStrObj = {
                 empId: empIdVar,
                 empName: empNameVar,
                 empEmail: empEmailVar,
+                empPassword: empPasswordVar,
             };
 
             return JSON.stringify(jsonStrObj);
@@ -96,6 +107,7 @@
             $("#empId").val("")
             $("#empName").val("");
             $("#empEmail").val("");
+            $("#empPassword").val("");
             $("#empId").focus();
         }
 
