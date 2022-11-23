@@ -14,3 +14,7 @@ In this project we are using JSON PowerDB to store the details of employees from
 * All document use cases.
 * Time series/geospatial analytics.
 * Real time application for data analytics.
+
+![Screenshot (728)](https://user-images.githubusercontent.com/83516604/203566786-d79cdb71-70ce-4d8e-83eb-6f8a38fbea49.png)
+![Screenshot (729)](https://user-images.githubusercontent.com/83516604/203566822-bbc2d13c-9a2d-4914-86f7-50a910c1ab05.png)
+
